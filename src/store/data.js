@@ -1,4 +1,5 @@
 import { reactive } from "vue";
+//import axios from 'axios';
 
 export const store = {
   debug: false,
@@ -29,15 +30,18 @@ export const store = {
     categories: reactive([
       {
         id: 1,
-        name: "Informática"
+        name: "Informática",
+        description: "Descripción"
       },
       {
         id: 2,
-        name: "Cocina"
+        name: "Cocina",
+        description: "Descripción"
       },
       {
         id: 2,
-        name: "Medicina"
+        name: "Medicina",
+        description: "Descripción"
       }
     ])
   }
