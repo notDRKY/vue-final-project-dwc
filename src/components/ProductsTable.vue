@@ -17,14 +17,10 @@
         <product-item v-for="i in products" :key="i.id" :item="i"></product-item>
         <!--Fila de recuento de productos y importe total de estos:-->
         <tr>
-          <!--Las etiquetas <td> vacías son por fines estéticos cuando se muestre la tabla-->
-          <td>Productos:</td>
-          <td></td>
-          <td></td>
-          <td>{{ totalProducts }}</td>
+          <td colspan="3"> Productos:</td>
+          <td><strong> {{ totalProducts }} </strong></td>
           <td>Importe:</td>
-          <td>{{ totalAmount }}€</td>
-          <td></td>
+          <td colspan="2"><strong> {{ totalAmount }}€ </strong></td>
         </tr>
       </tbody>
     </table>
@@ -52,7 +48,7 @@ export default {
     },
     totalAmount() {
       // recursivo???
-      return this.products.reduce((acc, i) => Number.parseFloat(acc += (i.price * i.units)), 0)
+      return this.products.reduce((acc, i) => Number.parseFloat(acc += (i.price * i.units)), 0).toFixed(2)
     }
   }
 }

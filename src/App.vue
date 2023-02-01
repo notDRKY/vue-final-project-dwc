@@ -6,6 +6,7 @@ import ProductsTable from './components/ProductsTable.vue';
 import { store } from './store/data.js'
 
 export default {
+  name: 'App',
   components: { ProductForm, ProductsTable, AppMenu },
   data() {
     return {
@@ -13,9 +14,9 @@ export default {
       categories: store.state.categories,
     };
   },
-  mounted() {
-    //store.loadData()
-  },
+  // mounted() {
+  //   store.loadData()
+  // },
 }
 </script>
 

@@ -2,17 +2,17 @@
   <tr>
     <td>{{ item.id }}</td>
     <td>{{ item.name }}</td>
-    <td>{{ item.category }}</td>
+    <td>{{ returnCategory(item.category) }}</td>
     <td>{{ item.units }}</td>
-    <td>{{ item.price }}€/u</td>
-    <td>{{ item.price * item.units }} €</td>
+    <td>{{ (item.price).toFixed(2) }}€/u</td>
+    <td>{{ (item.price * item.units).toFixed(2) }} €</td>
     <td class="text-center">
       <!--Botón flecha apuntando hacía arriba-->
       <button @click="incrementProductUnts" class="bi bi-arrow-up-square-fill"></button>
       <!--Botón flecha apuntando hacía abajo-->
       <button @click="decreaseProductUnts" class="bi bi-arrow-down-square-fill"></button>
-      <!--Botón de editar (claramnte no funcional)-->
-      <button class="bi bi-pencil-fill"></button>
+      <!--Botón de editar (claramente no funcional)-->
+      <button @click="returnCategory" class="bi bi-pencil-fill"></button>
       <!--Botón de borrar-->
       <button @click="delProduct" class="bi bi-x-square-fill"></button>
     </td>
@@ -20,8 +20,15 @@
 </template>
 
 <script>
+import { store } from '@/store/data';
+
 export default {
   name: 'product-item',
+  data() {
+    return {
+      categories: store.state.categories
+    }
+  },
   props: {
     item: {
       type: Object,
@@ -30,13 +37,19 @@ export default {
   },
   methods: {
     incrementProductUnts() {
-      alert('Unidades aumentan')
+      store.incrementProductUnitAction(this.item.id)
     },
     decreaseProductUnts() {
-      alert('Unidades disminuyen')
+      store.decreaseProductUnitAction(this.item.id)
     },
     delProduct() {
-      alert('Carlos chupa pijitas')
+      if (confirm(`Se va a borrar el producto '${this.item.name}'`)) {
+        store.deleteProductAction(this.item.id)
+      }
+    },
+    returnCategory(id) {
+      //store.returnProductCategoryAction(this.item.id)
+      return store.state.categories.find((i) => i.id === id).name
     }
   }
 }
