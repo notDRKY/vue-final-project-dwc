@@ -2,7 +2,6 @@ import { reactive } from "vue";
 //import axios from 'axios';
 
 export const store = {
-  debug: false,
   state: {
     products: reactive([
       {
@@ -44,5 +43,17 @@ export const store = {
         description: "Descripción"
       }
     ])
+  },
+  addProductAction(newName, newCategory,newUnits, newPrice) {
+    let maxId = this.state.todos.reduce(
+      (max, item) => (item.id > max ? item.id : max), 0
+    );
+    this.state.products.push({
+      id: maxId + 1,
+      name: newName,
+      category: newCategory,
+      units: newUnits,
+      price: newPrice
+    });
   }
 }

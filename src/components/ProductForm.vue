@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { store } from '../store/data'
+import { store } from '../store/data.js'
 
 export default {
 	name: 'product-form',
@@ -63,7 +63,13 @@ export default {
 	},
 	methods: {
 		submitForm() {
-			alert('Se quiere enviar el formulario')
+			if (this.product) {
+				store.addProductAction(this.product.name, this.product.category, this.product.units, this.product.price)
+				this.product.name = ''
+				this.product.category = ''
+				this.product.units = ''
+				this.product.price = ''
+			}
 		}
 	}
 }

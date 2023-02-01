@@ -1,21 +1,21 @@
 <script>
 import AppMenu from './components/AppMenu.vue';
 import ProductForm from './components/ProductForm.vue';
- import ProductsTable from './components/ProductsTable.vue';
+import ProductsTable from './components/ProductsTable.vue';
 
-import { store } from './store/data'
+import { store } from './store/data.js'
 
 export default {
-  components: {ProductForm, ProductsTable, AppMenu },
+  components: { ProductForm, ProductsTable, AppMenu },
   data() {
-        return {
-            products: store.products,
-            categories: store.categories,
-        };
-    },
-    mounted() {
-      store.loadData()
-    },
+    return {
+      products: store.state.products,
+      categories: store.state.categories,
+    };
+  },
+  mounted() {
+    //store.loadData()
+  },
 }
 </script>
 
