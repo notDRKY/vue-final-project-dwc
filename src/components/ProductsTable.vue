@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { store } from '../store/data.js'
 import ProductItem from './ProductItem.vue';
 
 export default {
@@ -37,11 +36,7 @@ export default {
   components: {
     ProductItem
   },
-  data() {
-    return {
-      products: store.state.products
-    }
-  },
+  props: ['products'],
   computed: {
     totalProducts() {
       return this.products.reduce((acc, i) => Number.parseFloat(acc += i.units), 0)

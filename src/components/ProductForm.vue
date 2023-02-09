@@ -49,6 +49,7 @@ import { store } from '../store/data.js'
 
 export default {
 	name: 'product-form',
+	props: ['categories'],
 	data() {
 		return {
 			product: {
@@ -58,7 +59,6 @@ export default {
 				units: '',
 				price: ''
 			},
-			categories: store.state.categories
 		}
 	},
 	methods: {

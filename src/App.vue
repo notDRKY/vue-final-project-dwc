@@ -10,21 +10,26 @@ export default {
   components: { ProductForm, ProductsTable, AppMenu },
   data() {
     return {
-      products: store.state.products,
-      categories: store.state.categories,
+      products: [],
+      categories: [],
     };
   },
-  // mounted() {
-  //   store.loadData()
-  // },
+  async mounted() {
+    const { products, categories } = await store.loadData()
+
+    this.products = products
+    this.categories = categories
+
+    console.log({ categories });
+  },
 }
 </script>
 
 <template>
   <div class="container">
-    <AppMenu></AppMenu>
-    <ProductsTable></ProductsTable>
-    <ProductForm></ProductForm>
+    <AppMenu />
+    <ProductsTable :products="products" />
+    <ProductForm :categories="categories" />
     <footer><small>Diseño Web en Entorno Cliente - IES Mestre Ramon Esteve</small></footer>
   </div>
 </template>

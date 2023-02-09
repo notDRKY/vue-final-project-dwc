@@ -24,16 +24,15 @@ import { store } from '@/store/data';
 
 export default {
   name: 'product-item',
-  data() {
-    return {
-      categories: store.state.categories
-    }
-  },
   props: {
     item: {
       type: Object,
       required: true
-    }
+    },
+     category: {
+      type: Object,
+      required: true
+     }
   },
   methods: {
     incrementProductUnts() {
@@ -49,7 +48,7 @@ export default {
     },
     returnCategory(id) {
       //store.returnProductCategoryAction(this.item.id)
-      return store.state.categories.find((i) => i.id === id).name
+      return store.categories.find((i) => i.id === id).name
     }
   }
 }
