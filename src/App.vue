@@ -19,8 +19,6 @@ export default {
 
     this.products = products
     this.categories = categories
-
-    console.log({ categories });
   },
 }
 </script>
@@ -28,7 +26,7 @@ export default {
 <template>
   <div class="container">
     <AppMenu />
-    <ProductsTable :products="products" />
+    <ProductsTable :products="products"/>
     <ProductForm :categories="categories" />
     <footer><small>Diseño Web en Entorno Cliente - IES Mestre Ramon Esteve</small></footer>
   </div>

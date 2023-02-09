@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { reactive } from 'vue';
 
 const url = 'http://localhost:3000';
 
@@ -7,6 +8,10 @@ const instance = axios.create({
 });
 
 export const store = {
+  state: {
+    products: reactive([]),
+    categories: reactive([]),
+  },
   async loadData() {
     try {
       const [{ data: products }, { data: categories }] = await Promise.all([
@@ -33,15 +38,23 @@ export const store = {
     );
 
     try {
-      await Promise.all(
-        instance.post(`/products`, {
-          id: maxId + 1,
-          name: newName,
-          category: newCategory,
-          units: newUnits,
-          price: newPrice,
-        })
-      );
+      await instance.post(`/products`, {
+        id: maxId + 1,
+        name: newName,
+        category: newCategory,
+        units: newUnits,
+        price: newPrice,
+      });
+      console.log('Actualizado serv');
+
+      this.products.push({
+        id: maxId + 1,
+        name: newName,
+        category: newCategory,
+        units: newUnits,
+        price: newPrice,
+      });
+      console.log('Actualizado local');
     } catch (ex) {
       if (!ex.status) {
         alert('Error: el servidor no responde');
@@ -50,10 +63,19 @@ export const store = {
       }
     }
   },
-  deleteProductAction(id) {
+  async deleteProductAction(id) {
     let index = this.state.products.findIndex((i) => i.id === id);
     if (index !== -1) {
-      this.state.products.splice(index, 1);
+      try {
+        await instance.delete(`products/${id}`);
+        this.state.products.splice(index, 1);
+      }  catch (ex) {
+        if (!ex.status) {
+          alert('Error: el servidor no responde, no se ha podido borrar el registro');
+        } else {
+          alert('Error ' + ex.status + ': ' + ex.message);
+        }
+      }
     }
   },
   incrementProductUnitAction(id) {

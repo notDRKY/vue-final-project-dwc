@@ -29,10 +29,6 @@ export default {
       type: Object,
       required: true
     },
-     category: {
-      type: Object,
-      required: true
-     }
   },
   methods: {
     incrementProductUnts() {
@@ -45,11 +41,10 @@ export default {
       if (confirm(`Se va a borrar el producto '${this.item.name}'`)) {
         store.deleteProductAction(this.item.id)
       }
-    },
-    returnCategory(id) {
-      //store.returnProductCategoryAction(this.item.id)
-      return store.categories.find((i) => i.id === id).name
-    }
+     },
+     returnCategory(id) {
+       return store.categories.find((i) => i.id === id).name
+     }
   }
 }
 </script>
