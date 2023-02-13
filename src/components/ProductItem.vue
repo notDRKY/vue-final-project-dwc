@@ -43,7 +43,7 @@ export default {
       }
      },
      returnCategory(id) {
-       return store.categories.find((i) => i.id === id).name
+       return store.state.categories.find((i) => i.id === id).name
      }
   }
 }
