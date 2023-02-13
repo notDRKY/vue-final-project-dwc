@@ -13,23 +13,23 @@ export const store = {
     categories: [],
   }),
   async loadData() {
-    try {
-      const [{ data: products }, { data: categories }] = await Promise.all([
-        instance.get(`/products`),
-        instance.get(`/categories`),
-      ]);
+    return Promise.all([instance.get('/products'), instance.get('/categories')])
+      .then((responses) => {
+        const products = responses[0].data;
+        const categories = responses[1].data;
 
-      this.state.products = products;
-      this.state.categories = categories;
+        this.state.products = products;
+        this.state.categories = categories;
 
-      return { products, categories };
-    } catch (ex) {
-      if (!ex.status) {
-        alert('Error: el servidor no responde');
-      } else {
-        alert('Error ' + ex.status + ': ' + ex.message);
-      }
-    }
+        return { products: products, categories: categories };
+      })
+      .catch((ex) => {
+        if (!ex.status) {
+          alert('Error: el servidor no responde');
+        } else {
+          alert('Error ' + ex.status + ': ' + ex.message);
+        }
+      });
   },
   addProductAction(newName, newCategory, newUnits, newPrice) {
     let maxId = this.state.products.reduce(
@@ -55,7 +55,9 @@ export const store = {
       })
       .catch((ex) => {
         if (!ex.status) {
-          alert('Error: el servidor no responde, no se ha podido agregar el registro.');
+          alert(
+            'Error: el servidor no responde, no se ha podido agregar el registro.'
+          );
         } else {
           alert('Error ' + ex.status + ': ' + ex.message);
         }
