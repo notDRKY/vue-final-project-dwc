@@ -4,9 +4,9 @@
       <span class="navbar-brand" href="#">Almacén IESMRE</span>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-              <a class="nav-link active" data-div="div-prods" aria-current="page" href="#">Productos</a>
+              <a class="nav-link active" data-div="div-prods" aria-current="page" href="/products">Productos</a>
               <a class="nav-link" data-div="div-cats" href="#">Categorías</a>
-              <a class="nav-link" data-div="div-form-prod" href="#">Añadir producto</a>
+              <a class="nav-link" data-div="div-form-prod" href="/product-form">Añadir producto</a>
               <a class="nav-link" data-div="div-form-cat" href="#">Añadir categoría</a>
               <a class="nav-link" data-div="div-about" href="#">Sobre nosotros</a>
           </div>

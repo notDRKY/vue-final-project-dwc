@@ -18,9 +18,9 @@
         <!--Fila de recuento de productos y importe total de estos:-->
         <tr>
           <td colspan="3"> Productos:</td>
-          <td><strong> {{ totalProducts }} </strong></td>
+          <td class="fw-bold">{{ totalProducts }}</td>
           <td>Importe:</td>
-          <td colspan="2"><strong> {{ totalAmount }}€ </strong></td>
+          <td class="fw-bold" colspan="2">{{ totalAmount }}€</td>
         </tr>
       </tbody>
     </table>
