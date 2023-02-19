@@ -11,10 +11,10 @@
       <button @click="incrementProductUnts" class="bi bi-arrow-up-square-fill"></button>
       <!--Botón flecha apuntando hacía abajo-->
       <button @click="decreaseProductUnts" class="bi bi-arrow-down-square-fill"></button>
-      <!--Botón de editar (claramente no funcional)-->
-      <button class="bi bi-pencil-fill"></button>
+      <!--Botón de editar (no funcional)-->
+      <button class="bi bi-pencil-fill" disabled></button>
       <!--Botón de borrar-->
-      <button @click="delProduct" class="bi bi-x-square-fill"></button>
+      <button @click="delProduct" class="bi bi-x-square-fill text-danger"></button>
     </td>
   </tr>
 </template>
