@@ -12,7 +12,7 @@
       <!--Botón flecha apuntando hacía abajo-->
       <button @click="decreaseProductUnts" class="bi bi-arrow-down-square-fill"></button>
       <!--Botón de editar (claramente no funcional)-->
-      <button @click="returnCategory" class="bi bi-pencil-fill"></button>
+      <button @click="returnCategory" class="bi bi-pencil-fill" disabled></button>
       <!--Botón de borrar-->
       <button @click="delProduct" class="bi bi-x-square-fill"></button>
     </td>
