@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="table_cont">
     <h1>Listado de productos</h1>
     <table v-if="products.length">
       <thead>
@@ -16,7 +16,7 @@
       <tbody>
         <product-item v-for="i in products" :key="i.id" :item="i"></product-item>
         <!--Fila de recuento de productos y importe total de estos:-->
-        <tr>
+        <tr class="total">
           <td colspan="3"> Productos:</td>
           <td><strong> {{ totalProducts }} </strong></td>
           <td>Importe:</td>
@@ -53,10 +53,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  thead {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-</style>
