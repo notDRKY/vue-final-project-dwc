@@ -26,7 +26,6 @@ export default {
     <ProductsTable></ProductsTable>
     <ProductForm></ProductForm>
   </div>
-  <footer><small>Diseño Web en Entorno Cliente - IES Mestre Ramon Esteve</small></footer>
 </template>
 
 <style>
@@ -49,7 +48,7 @@ h1 {
 
 #container {
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-wrap: wrap;
 }
