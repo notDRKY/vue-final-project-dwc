@@ -28,3 +28,10 @@ export default {
     <footer><small>Diseño Web en Entorno Cliente - IES Mestre Ramon Esteve</small></footer>
   </div>
 </template>
+
+<style>
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px;
+  }
+</style>
