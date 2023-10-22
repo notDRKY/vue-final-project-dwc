@@ -58,7 +58,7 @@ h1 {
 
 .table_cont {
   padding: 1rem;
-  width: 50%;
+  width: auto;
 }
 
 table {
@@ -81,6 +81,7 @@ table thead {
 table td {
   min-width: 7rem;
   padding: 0.125rem;
+  padding-right: 1.75rem;
 }
 
 table tr.total {
@@ -95,8 +96,7 @@ table tr.total td {
 /* Form styles */
 form {
   flex: 1;
-  width: 100%;
-  box-sizing: border-box;
+  width: auto;
   align-items: center;
 }
 

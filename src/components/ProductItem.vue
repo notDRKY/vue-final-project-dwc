@@ -85,7 +85,13 @@ export default {
     },
     returnCategory(id) {
       //store.returnProductCategoryAction(this.item.id)
-      return store.state.categories.find((i) => i.id === id).name
+      //return store.state.categories.find((i) => i.id === id).name
+      const category = store.state.categories.find((i) => i.id === id);
+      if (category) {
+        return category.name;
+      } else {
+        return "Sin categoría";
+      }
     }
   }
 }
@@ -101,4 +107,5 @@ tr td button {
 
 tr td button:hover {
   cursor: pointer;
-}</style>
+}
+</style>
