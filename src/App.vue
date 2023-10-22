@@ -32,6 +32,10 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
 
+html {
+  color-scheme: dark;
+}
+
 body {
   color: #bfc7d2;
   background-color: #10151d;
@@ -39,19 +43,22 @@ body {
   font-size: 18px;
 }
 
+h1 {
+  color: #ffc26e;
+}
+
 #container {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   display: flex;
   flex-wrap: wrap;
-
 }
 
 /* Table styles */
 
 .table_cont {
   padding: 1rem;
-  width: 100%;
+  width: 50%;
 }
 
 table {
@@ -59,14 +66,16 @@ table {
   width:100%;
   box-sizing: border-box;
   align-items: center;
-  border: 1.25px solid #bfc7d2;
+  border: 0 solid #bfc7d2;
   border-radius: 14px;
+  border-collapse: collapse;
   padding: 0.25rem;
 }
 
 table thead {
   text-transform: uppercase;
   font-weight: bold;
+  color: #a87ffb;
 }
 
 table td {
@@ -76,6 +85,11 @@ table td {
 
 table tr.total {
   text-transform: uppercase;
+}
+
+table tr.total td {
+  border-top: 2px solid #2e3c51;
+  padding-top: 0.5rem;
 }
 
 /* Form styles */
@@ -115,8 +129,10 @@ form .input-group input {
   min-width: 100%;
   color: #bfc7d2;
   background-color: transparent;
-  border: 1.25px solid #bfc7d2;
-  border-radius: 12px;
+  border-top: 0;
+  border-bottom: 2px solid #2e3c51;
+  border-left: 0;
+  border-right: 0;
   outline: none;
 }
 
@@ -131,13 +147,14 @@ form select {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  height: 2rem;
+  height: 2.5rem;
   min-width: 100%;
   text-align: center;
   color: #bfc7d2;
   background-color: transparent;
-  border: 1.25px solid #bfc7d2;
+  border: 0px solid #bfc7d2;
   border-radius: 12px;
+  outline: none;
 }
 
 form select option {
@@ -154,7 +171,7 @@ form button {
   margin: 1rem 0.125rem 0.125rem 0.125rem;
   color: #bfc7d2;
   font-size: 18px;
-  min-height: 2rem;
+  min-height: 2.5rem;
   border-radius: 10px;
   border: 0.1rem transparent;
   cursor: pointer;
