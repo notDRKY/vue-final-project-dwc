@@ -9,7 +9,7 @@
 				<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
 				<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
 			</svg>
-			Almacén IESMRE
+			Warehouse IESMRE
 		</span>
 		<div class="navbar">
 			<a href="#">
@@ -23,7 +23,7 @@
 					<path d="M12 12l-8 -4.5"></path>
 					<path d="M16 5.25l-8 4.5"></path>
 				</svg>
-				Productos
+				Products
 			</a>
 			<a href="#">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category" width="24" height="24"
@@ -35,7 +35,7 @@
 					<path d="M4 14h6v6h-6z"></path>
 					<path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
 				</svg>
-				Categorías
+				Categories
 			</a>
 			<a href="#">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24"
@@ -45,7 +45,7 @@
 					<path d="M12 5l0 14"></path>
 					<path d="M5 12l14 0"></path>
 				</svg>
-				Añadir producto
+				Add product
 			</a>
 			<a href="#">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24"
@@ -55,7 +55,7 @@
 					<path d="M12 5l0 14"></path>
 					<path d="M5 12l14 0"></path>
 				</svg>
-				Añadir categoría
+				Add category
 			</a>
 			<a href="#">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-square-rounded" width="24"
@@ -66,7 +66,7 @@
 					<path d="M11 12h1v4h1"></path>
 					<path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"></path>
 				</svg>
-				Sobre nosotros
+				About us
 			</a>
 		</div>
 	</nav>

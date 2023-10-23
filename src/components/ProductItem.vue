@@ -90,7 +90,7 @@ export default {
       if (category) {
         return category.name;
       } else {
-        return "Sin categoría";
+        return "No category";
       }
     }
   }

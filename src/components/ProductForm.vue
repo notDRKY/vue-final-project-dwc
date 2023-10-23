@@ -11,7 +11,7 @@
 					<path d="M11 4l-4 16"></path>
 					<path d="M17 4l-4 16"></path>
 				</svg>
-				Añadir producto
+				Add product
 			</h1>
 			<!-- Aquí los inputs y botones del form -->
 
@@ -22,28 +22,28 @@
 
 			<div class="input-group">
 				<input type="text" v-model="product.name" required>
-				<label for="">Nombre</label>
+				<label for="">Name</label>
 			</div>
 
 			<div class="input-group">
 				<input type="number" v-model="product.units" required min="0" step="1">
-				<label for="">Unidades</label>
+				<label for="">Units</label>
 			</div>
 
 			<div class="input-group">
 				<input type="number" v-model="product.price" required min="0" step="0.01">
-				<label for="">Precio</label>
+				<label for="">Price</label>
 			</div>
 			<div>
 				<label for=""></label>
 				<select v-model="product.category" required>
-					<option value="">Selecciona categoría 📦</option>
+					<option value="">Select category 📦</option>
 					<option v-for="cat in categories" :key="cat.id" :value="cat.id" :title="cat.description">{{ cat.name }}
 					</option>
 				</select>
 			</div>
 			<div class="buttons">
-				<button type="submit">Añadir</button>
+				<button type="submit">Add</button>
 				<button type="reset">Reset</button>
 			</div>
 		</div>

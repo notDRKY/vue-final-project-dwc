@@ -5,21 +5,21 @@ export const store = {
     products: reactive([
       {
         id: 2,
-        name: 'Silla de ordenador',
+        name: 'Computer chair',
         category: 1,
         units: 4,
         price: 145.95,
       },
       {
         id: 3,
-        name: 'Mesa de impresora',
+        name: 'Printer',
         category: 1,
         units: 0,
-        price: 45.95,
+        price: 65.95,
       },
       {
         id: 1,
-        name: 'Mesa de ordenador',
+        name: 'Computer desk',
         category: 1,
         units: 3,
         price: 125.95,
@@ -28,17 +28,17 @@ export const store = {
     categories: reactive([
       {
         id: 1,
-        name: 'Informática',
+        name: 'Computing',
         description: 'Descripción',
       },
       {
         id: 2,
-        name: 'Cocina',
+        name: 'Kitchenware',
         description: 'Descripción',
       },
       {
         id: 2,
-        name: 'Medicina',
+        name: 'Medicine',
         description: 'Descripción',
       },
     ]),

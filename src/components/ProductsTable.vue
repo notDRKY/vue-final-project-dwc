@@ -10,32 +10,32 @@
         <path d="M11 4l-4 16"></path>
         <path d="M17 4l-4 16"></path>
       </svg>
-      Listado de productos
+      Product list
     </h1>
     <table v-if="products.length">
       <thead>
         <tr>
           <td>Id</td>
-          <td>Nombre</td>
-          <td>Categoría</td>
+          <td>Name</td>
+          <td>Category</td>
           <td>Uds.</td>
-          <td>Precio/u</td>
-          <td>Importe</td>
-          <td>Acciones</td>
+          <td>Price/u</td>
+          <td>Amount</td>
+          <td>Actions</td>
         </tr>
       </thead>
       <tbody>
         <product-item v-for="i in products" :key="i.id" :item="i"></product-item>
         <!--Fila de recuento de productos y importe total de estos:-->
         <tr class="total">
-          <td colspan="3"> Productos:</td>
+          <td colspan="3"> Products:</td>
           <td><strong> {{ totalProducts }} </strong></td>
-          <td>Importe:</td>
+          <td>Amount:</td>
           <td colspan="2"><strong> {{ totalAmount }}€ </strong></td>
         </tr>
       </tbody>
     </table>
-    <p v-else>No hay productos que mostrar</p>
+    <p v-else>No products to display</p>
   </div>
 </template>
 
