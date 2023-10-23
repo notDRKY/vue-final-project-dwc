@@ -62,7 +62,7 @@ h1 {
 
 table {
   flex: 1;
-  width:100%;
+  width:auto;
   box-sizing: border-box;
   align-items: center;
   border: 0 solid #bfc7d2;
@@ -78,7 +78,7 @@ table thead {
 }
 
 table td {
-  min-width: 7rem;
+  min-width: 6.25rem;
   padding: 0.125rem;
   padding-right: 1.75rem;
 }
