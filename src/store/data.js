@@ -29,17 +29,17 @@ export const store = {
       {
         id: 1,
         name: 'Computing',
-        description: 'Descripción',
+        description: 'Description',
       },
       {
         id: 2,
         name: 'Kitchenware',
-        description: 'Descripción',
+        description: 'Description',
       },
       {
         id: 2,
         name: 'Medicine',
-        description: 'Descripción',
+        description: 'Description',
       },
     ]),
   },

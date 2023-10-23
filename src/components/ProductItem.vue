@@ -79,7 +79,7 @@ export default {
       store.decreaseProductUnitAction(this.item.id)
     },
     delProduct() {
-      if (confirm(`Se va a borrar el producto '${this.item.name}'`)) {
+      if (confirm(`Product '${this.item.name}' is to be deleted`)) {
         store.deleteProductAction(this.item.id)
       }
     },
